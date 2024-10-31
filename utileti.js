@@ -22,3 +22,13 @@ function getRandomeAlpabet(){
     const alpahbetsor = spliteAlpah[index];
     return alpahbetsor;
 }
+
+document.addEventListener('keyup', function keybordbuttonPrace(event){
+    console.log(event.key);
+
+    const expartAlp = document.getElementById('current-alphabet');
+    const expartAlpValue = expartAlp.innerText;
+    const expartValueLow = expartAlpValue.toLowerCase();
+
+    console.log(expartValueLow)
+});
