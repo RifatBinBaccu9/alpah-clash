@@ -12,6 +12,10 @@ function showBgColor(elementId){
     const BgColorId = document.getElementById(elementId);
     BgColorId.classList.add('bg-orange-400');
 }
+function removeBgColor(elementId){
+    const BgColorId = document.getElementById(elementId);
+    BgColorId.classList.remove('bg-orange-400');
+}
 function getRandomeAlpabet(){
     const alpahbat = 'abcdefghijklmnopqrstwvxyz';
     const spliteAlpah = alpahbat.split('');
@@ -31,8 +35,38 @@ document.addEventListener('keyup', function keybordbuttonPrace(event){
     const expartValueLow = expartAlpValue.toLowerCase();
 
     if(playrprssKey === expartValueLow){
-        console.log('Prss right key');
+        continewGame();
+        removeBgColor(expartValueLow)
+
+        const curantScour = document.getElementById('score');
+        const textCurantScour = curantScour.innerText;
+        const convertScour = parseInt(textCurantScour);
+        const scorSorted= convertScour + 1;
+
+        curantScour.innerText = scorSorted;
     }else{
-        console.log('Prss wrong key');
+        const removelife = document.getElementById('life');
+            const textLife = removelife.innerText;
+            const convertInt = parseInt(textLife);
+        if (convertInt > '1') {
+            const removelife = document.getElementById('life');
+            const textLife = removelife.innerText;
+            const convertInt = parseInt(textLife);
+            const removeinglife= convertInt - 1;
+    
+            removelife.innerText = removeinglife; 
+        } else {
+        console.log('hey')
+        hiddenElementById('play-ground-section');
+
+        hiddenRemoveById('score-section');
+
+        const scour = document.getElementById('score');
+        const allScour = scour.innerText;
+        const viewScour = parseInt(allScour);
+
+        const displayScour = document.getElementById('gain-score');
+        displayScour.innerText = viewScour;
+        }
     }
 });
