@@ -7,3 +7,7 @@ function hiddenRemoveById(removeId){
 const removeHidden = document.getElementById(removeId);
 removeHidden.classList.remove('hidden');
 }
+
+function getRandomeAlpabet(){
+    
+}
