@@ -24,11 +24,15 @@ function getRandomeAlpabet(){
 }
 
 document.addEventListener('keyup', function keybordbuttonPrace(event){
-    console.log(event.key);
+    const playrprssKey = event.key;
 
     const expartAlp = document.getElementById('current-alphabet');
     const expartAlpValue = expartAlp.innerText;
     const expartValueLow = expartAlpValue.toLowerCase();
 
-    console.log(expartValueLow)
+    if(playrprssKey === expartValueLow){
+        console.log('Prss right key');
+    }else{
+        console.log('Prss wrong key');
+    }
 });
