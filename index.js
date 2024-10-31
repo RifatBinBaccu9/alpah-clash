@@ -2,6 +2,8 @@ function continewGame(){
     const alpahView= getRandomeAlpabet();
     const textView= document.getElementById('current-alphabet');
     textView.innerText=alpahView;
+
+    showBgColor(alpahView);
 }
 
 function play(){

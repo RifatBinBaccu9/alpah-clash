@@ -8,6 +8,10 @@ const removeHidden = document.getElementById(removeId);
 removeHidden.classList.remove('hidden');
 }
 
+function showBgColor(elementId){
+    const BgColorId = document.getElementById(elementId);
+    BgColorId.classList.add('bg-orange-400');
+}
 function getRandomeAlpabet(){
     const alpahbat = 'abcdefghijklmnopqrstwvxyz';
     const spliteAlpah = alpahbat.split('');
