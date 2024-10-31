@@ -8,6 +8,11 @@ function continewGame(){
 
 function play(){
      hiddenElementById('home-section');
-     hiddenRemoveById('play-ground-section')
+     hiddenElementById('score-section');
+     hiddenRemoveById('play-ground-section');
      continewGame();
+     const setScore = document.getElementById('score');
+     setScore.innerText= '0';
+     const setLife = document.getElementById('life');
+     setLife.innerText= '5';
 };
