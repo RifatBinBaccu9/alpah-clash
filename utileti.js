@@ -9,5 +9,12 @@ removeHidden.classList.remove('hidden');
 }
 
 function getRandomeAlpabet(){
-    
+    const alpahbat = 'abcdefghijklmnopqrstwvxyz';
+    const spliteAlpah = alpahbat.split('');
+
+    const randomealp = Math.random() * 25;
+    const index = Math.round(randomealp);
+
+    const alpahbetsor = spliteAlpah[index];
+    return alpahbetsor;
 }
